@@ -74,6 +74,8 @@ let signer
 
 let event_logs
 
+let months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "November", "December"]
+
 async function initialize(){
 	provider = ethers.getDefaultProvider("homestead")
 	dad = new ethers.Contract(dadAddress,dadABI,provider)
@@ -109,11 +111,13 @@ async function populateDapps(){
 	let description = event_logs[n].description
 	let date = new Date(event_logs[n].timestamp*1000)
 
-var month = date.getUTCMonth() + 1; //months from 1-12
+var monthNo = date.getUTCMonth(); //months from 1-12
 var day = date.getUTCDate();
 var year = date.getUTCFullYear();
 
-newdate = year + "/" + month + "/" + day;
+let month = months[monthNo]
+
+newdate = day + " " + month + " " + year;
 
 	name = document.createTextNode(name)
 	description = document.createTextNode(description)
