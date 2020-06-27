@@ -155,7 +155,7 @@ async function add(){
 	let link = document.getElementById("dappLink").value
 	let repository = document.getElementById("dappRepository").value
 
-	await dad.add(name,description,link,repository)
+	await dadSigner.add(name,description,link,repository)
 }
 
 //blocks to read events from
