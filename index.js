@@ -160,8 +160,8 @@ async function add(){
 
 //blocks to read events from
 
-let fromBlock = 8160000//7990783
-let toBlock = 9000000
+let fromBlock = 10345600//7990783
+let toBlock = 14345600
 
 async function gatherEventLogs(){
 	console.log("gather Logs")
@@ -217,13 +217,13 @@ function HexToString(hex) {
 }
 
 async function getTimeStamp(blockNumber){
-  let provider = ethers.getDefaultProvider("ropsten")
+  let provider = ethers.getDefaultProvider("homestead")
   let block = await provider.getBlock(blockNumber)
   return block.timestamp
 }
 
 async function getNonce(txHash){
-  let provider = ethers.getDefaultProvider("ropsten")
+  let provider = ethers.getDefaultProvider("homestead")
   let tx = await provider.getTransaction(txHash)
   return(tx.nonce)
 }
