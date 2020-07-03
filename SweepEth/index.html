@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script charset="utf-8"
+            src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+            type="text/javascript">
+    </script>
+    <script src="index.js"></script>
+
+
+  </head>
+  <body>
+    <h3>Sweep ETH </h3>
+    <h5>Ropsten Testnet</h5>
+    <h5>Sweep All ETH from wallets derived from a seed phrase, using a standard derivation path</h5>
+    <h5>Path: "m/44'/60'/0'/0/"</h5>
+    <input id="seed" placeholder = "seed phrase..."></input><br>
+    <input id="to" placeholder = "sweep to..."></input><br>
+
+
+    <button onclick = "sweep()">Sweep</button>
+  </body>
+</html>

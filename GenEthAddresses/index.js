@@ -8,12 +8,7 @@ let data
    function getCSVData(){
      data = new Array()
      let  mnemonic = document.getElementById("seed").value
-     let provider = ethers.getDefaultProvider("homestead");
-
-     let wallet = ethers.Wallet.fromMnemonic(mnemonic)
-
-     let walletWithProvider = new ethers.Wallet(wallet.privateKey, provider);
-
+     
      let masterNode = ethers.utils.HDNode.fromMnemonic(mnemonic);
 
      for (i=0;i<999;i++){
