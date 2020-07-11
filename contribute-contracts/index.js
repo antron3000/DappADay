@@ -48,7 +48,7 @@ let v2ABI = [
 
 
 
-let parentAddress = "0x1FB3D756ac8BEd3358CFF255E1457FEB8937125b"
+let parentAddress = "0x2321c62bf3Dba181A5247Ce47A1Af714d8e1c613"
 let parentABI = [
 	{
 		"anonymous": false,
@@ -233,6 +233,7 @@ async function populateSelects() {
 
 async function displayv1() {
   let selectedIndex = document.getElementById("v1Select").selectedIndex
+  if(selectedIndex==-1){return}
   document.getElementById("v1QR").src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + v1s[selectedIndex].address
   document.getElementById("v1AddressLabel").innerHTML = v1s[selectedIndex].address
   document.getElementById("v1AddressLabel").href = "https://etherscan.io/address/" +  v1s[selectedIndex].address
@@ -242,6 +243,8 @@ async function displayv1() {
 
 async function displayv2(){
   let selectedIndex = document.getElementById("v2Select").selectedIndex
+  if(selectedIndex==-1){return}
+
   document.getElementById("v2QR").src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + v2s[selectedIndex].address
   document.getElementById("v2AddressLabel").innerHTML = v2s[selectedIndex].address
   document.getElementById("v2AddressLabel").href = "https://etherscan.io/address/" +  v2s[selectedIndex].address
@@ -365,8 +368,8 @@ async function getv2Info(v2logs) {
   	}
     return(v2Info)
 }
-let fromBlock = 8044658
-let toBlock = 8544658
+let fromBlock = 10400000
+let toBlock = 15400000
 
 function createFilterv1(topic,address){
   let filter = {

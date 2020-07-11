@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script charset="utf-8"
+          src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+          type="text/javascript">
+  </script>
+  <script src="index.js"></script>
+  <script>initialize(web3)</script>
+  </head>
+  <body>
+    <h2> Transaction Replacer</h2>
+
+    <input id="nonceInput" placeholder = "nonce..."></input> <br>
+    <input id="amountInput" placeholder = "amount... ETH"></input> <br>
+    <input id="gasPriceInput" placeholder = "gas Price... (Gwei)"></input> <br>
+    <input id="toInput" placeholder = "To..."></input> <br>
+    <button onclick="send()">Send</button>
+  </body>
+  <script>initialize(web3)</script>
+</html>
