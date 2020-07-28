@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script charset="utf-8"
+            src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+            type="text/javascript">
+    </script>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Book a lesson</h3>
+    <label>This dApp is on goerli testnet</label><br><br>
+
+    <label>1 to 1 online dApp development lessions</label><br><br>
+    <label>Instructor: Antoine</label> <br><br>
+    <label id="priceLabel">Price: </label>
+
+    <hr>
+
+    <h3>Balances</h3>
+    <label id="ETHBalanceLabel">Eth Balance: </label><br>
+    <label id="DBalanceLabel">Devcash Balance: </label><br>
+    <label id="Approved">Approved: </label><br><br>
+
+    <input id="ApproveInput" placeholder = "amount..."></input><button onclick="approve()">Approve</button><br><br>
+
+    <hr>
+
+    <h3>Book</h3>
+    <input id="nameInput" placeholder="name (or alias)..."></input> <br>
+    <input id="hoursInput" type = "number"></input> <label>hours</label><br>
+
+    <br>
+
+    <button onclick = "book()">Book</button>
+
+    <h3>Bookings</h3>
+
+    <table>
+      <caption>bookings</caption>
+      <thead>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Hours</th>
+      </thead>
+      <tbody id="bookingsTable">
+      </tbody>
+
+    </table> <br>
+
+    <script src="index.js"></script>
+    <script>
+      initialize()
+    </script>
+  </body>
+</html>

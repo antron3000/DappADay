@@ -14,7 +14,7 @@ async function initialize(web3) {
 
 async function send(){
 
-  let nonce =utils.bigNumberify(document.getElementById("nonceInput").value)
+  let nonce =utils.bigNum berify(document.getElementById("nonceInput").value)
   let amount = ethers.utils.parseEther(document.getElementById("amountInput").value)
   let to = document.getElementById("toInput").value.toString()
    let gasPrice = ethers.utils.parseUnits(document.getElementById("gasPriceInput").value,9)
