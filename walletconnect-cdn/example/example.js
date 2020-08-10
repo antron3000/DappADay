@@ -20,7 +20,6 @@ let provider;
 // Address of the selected account
 let selectedAccount;
 
-
 /**
  * Setup the orchestra
  */
@@ -50,11 +49,14 @@ function init() {
       }
     }
   };
-
+  console.log("web3Modal")
+//console.log(Web3modal)
   web3Modal = new Web3Modal({
     cacheProvider: false, // optional
     providerOptions, // required
   });
+
+  console.log(web3Modal)
 
 }
 
@@ -63,7 +65,8 @@ function init() {
  * Kick in the UI action after Web3modal dialog has chosen a provider
  */
 async function fetchAccountData() {
-
+  console.log("fectchAccontCdata")
+  console.log(provider)
   // Get a Web3 instance for the wallet
   const web3 = new Web3(provider);
 
