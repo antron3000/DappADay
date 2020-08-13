@@ -314,7 +314,7 @@ let tokenABI = [
 	}
 ]
 let token
-let tokenAddress = "0xea49420e4460a911220080e81f8605aa4b57b3b6"
+let tokenAddress = "0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a"
 let tokenDecimals
 let tokenSymbol
 let provider
@@ -410,7 +410,8 @@ async function approve(){
 
 async function connect() {
 	provider = await web3Modal.connect();
-	ethersProvider = new ethers.providers.Web3Provider(provider, "rinkeby");
+	console.log(provider)
+	ethersProvider = new ethers.providers.Web3Provider(provider, ethers.utils.getNetwork(provider.networkVersion));
   web3 = new Web3(provider);
   chainId = await web3.eth.getChainId();
   const chainData = await EvmChains.getChain(chainId);
