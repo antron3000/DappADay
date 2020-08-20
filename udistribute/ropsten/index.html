@@ -1,0 +1,88 @@
+<html>
+
+<script src = "index.js">
+</script>
+
+
+<script charset="utf-8"
+      src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+      type="text/javascript">
+</script>
+
+<script>
+  initialize(web3);
+</script>
+<body>
+
+<h1>uDistribute</h1>
+<h5>Create UCASH Distribution Programs. </h5>
+
+<hr>
+<label id="UCASHBalance"></label> <br>
+<label id="UCASHApproved"></label> <br><br>
+<label>Approve UCASH to Contract</label> <br>
+<input placeholder ="amount" id="approveAmount"></input><button onclick="approve()">Approve</button>
+
+<br>
+<br>
+<button onclick="dispense()">Get Test UCASH</button>
+
+<hr>
+<h4>diminishing rate distribution</h4>
+<input placeholder="address" id="address"></input> <br>
+<input placeholder="amount" id = "amount"></input> <br>
+<input type = "number" placeholder="period duration" id="interval"></input>
+<select id = "periodList">
+      <option value = 1>seconds</option>
+      <option value = 60>minutes</option>
+      <option value = 3600>hours</option>
+      <option value = 86400>days</option>
+      <option value = 604800>weeks</option>
+</select> <br>
+
+<input type = "number" placeholder="percentage per period" id="percentage"></input><br>
+<button onclick="create()">create</button>
+<br>
+<hr>
+<h4>fixed rate distribution</h4>
+
+<input placeholder="address" id= "address1"></input> <br>
+<input placeholder="amount" id = "amount1"></input> <br>
+<input type = "number" placeholder="period duration" id="interval1"></input>
+<select id = "periodList1">
+      <option value = 1>seconds</option>
+      <option value = 60>minutes</option>
+      <option value = 3600>hours</option>
+      <option value = 86400>days</option>
+      <option value = 604800>weeks</option>
+</select> <br>
+
+<input type = "number" placeholder="amount per period" id="amountPerPeriod"></input><br>
+<button onclick="create1()">create</button>
+<br>
+<hr>
+<h4>List of uDistributions</h4>
+
+	<table id="DTable">
+<thead>
+  <tr>
+    <th>address</th>
+    <th>started</th>
+    <th>last withdrawn</th>
+    <th>period</th>
+    <th>withdrawable</th>
+    <th>vault</th>
+  </tr>
+</thead>
+</table>
+
+<hr>
+<button onclick="withdraw()">Withdraw</button> <br>
+<label id="totalWithdrawable"></label>
+<hr>
+<h6>Contract Details</h6>
+<label id="contractAddress"></label><br>
+<a href="https://gist.github.com/antron3000/5432e444ea89af079b370e655cf8fb9f">Smart Contract Code</a>
+
+</body>
+</html>
